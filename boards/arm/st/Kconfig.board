@@ -1,0 +1,3 @@
+config F407ZG_PRJ
+	bool "F407ZG PRJ Board"
+	depends on SOC_STM32F407XG

@@ -1,0 +1,6 @@
+if F407ZG_PRJ
+
+config BOARD
+	default "f407zg_prj"
+
+endif # F407ZG_PRJ
