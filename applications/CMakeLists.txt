@@ -23,6 +23,7 @@ project(f407_prj)
 include_directories("${CMAKE_CURRENT_LIST_DIR}/BSP"
                     "${CMAKE_CURRENT_LIST_DIR}/Core"
                     "${CMAKE_CURRENT_LIST_DIR}/User")
+include(${CMAKE_CURRENT_LIST_DIR}/version.cmake)
 
 set(COMMON_SOURCES
     Core/main.c)

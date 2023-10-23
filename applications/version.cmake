@@ -1,0 +1,29 @@
+execute_process(
+COMMAND
+${PYTHON_EXECUTABLE}
+${CMAKE_CURRENT_SOURCE_DIR}/version.py
+OUTPUT_VARIABLE
+WORDSIZE
+OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+
+file(READ ${CMAKE_CURRENT_SOURCE_DIR}/VERSION ver)
+
+string(REGEX MATCH "VERSION_MAJOR=\'([0-9]*)\'" _ ${ver})
+set(VERSION_MAJOR ${CMAKE_MATCH_1})
+
+string(REGEX MATCH "VERSION_TEST=\'([0-9]*)\'" _ ${ver})
+set(VERSION_TEST ${CMAKE_MATCH_1})
+
+string(REGEX MATCH "VERSION_HW=\'([0-9]*)\'" _ ${ver})
+set(VERSION_HW ${CMAKE_MATCH_1})
+
+string(REGEX MATCH "VERSION_MINOR=\'([0-9]*)\'" _ ${ver})
+set(VERSION_MINOR ${CMAKE_MATCH_1})
+
+string(REGEX MATCH "BUILD_DATE=\'([0-9]*)\'" _ ${ver})
+set(BUILD_DATE ${CMAKE_MATCH_1})
+
+set(VERSION "\"${BUILD_DATE}\-${VERSION_MAJOR}.${VERSION_TEST}.${VERSION_HW}.${VERSION_MINOR}\"")
+
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/version.h.in ${CMAKE_CURRENT_SOURCE_DIR}/include/generated/app_version.h)

@@ -8,3 +8,4 @@ clang-format -i Core/include/*.h
 clang-format -i Core/src/*.cpp
 clang-format -i Core/src/*.c
 rm -rf .vscode/
+rm -rf ../.vscode/

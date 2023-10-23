@@ -1,0 +1,12 @@
+#ifndef _APP_VERSION_H_
+#define _APP_VERSION_H_
+
+#define APP_VERSION          @VERSION_MAJOR@
+#define APP_VERSION_NUMBER   @VERSION_TEST@
+#define APP_VERSION_MAJOR    @VERSION_HW@
+#define APP_VERSION_MINOR    @VERSION_MINOR@
+#define APP_PATCHLEVEL       @BUILD_DATE@
+
+#define APP_VERSION_STRING   @VERSION@
+
+#endif /* _APP_VERSION_H_ */
