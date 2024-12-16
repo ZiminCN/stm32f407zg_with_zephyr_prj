@@ -1,0 +1,5 @@
+board:
+  name: f407zg_prj
+  vendor: st
+  socs:
+    - name: stm32f407xx
