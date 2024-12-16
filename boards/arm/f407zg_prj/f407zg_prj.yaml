@@ -1,5 +1,5 @@
 identifier: f407zg_prj
-name: Black STM32 F407ZG Pro Development Board
+name: ST STM32F4 Discovery
 type: mcu
 arch: arm
 toolchain:
@@ -13,5 +13,4 @@ supported:
   - pwm
   - counter
   - usb
-  - spi
-  - gpio
+vendor: st
